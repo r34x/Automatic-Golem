@@ -13,4 +13,4 @@ This installer does several things, which are all optional. You can:
   - install Netdata, a free, open source system monitoring tool. More info at https://www.netdata.cloud/
   - launch Firefox and open the Netdata dashboard, if installed
   - continuously monitor the status of the provider node
-Installation is a snap. Just download the GolemDeploy.sh script, copy it to your Linux node and run it. The script will handle the rest and walk you through each step.  
+Installation is a snap. Just download the GolemDeploy.sh script, copy it to your Linux node and run it by opening a terminal and typing "./GolemProvider.sh". The script will handle the rest and walk you through each step.  
