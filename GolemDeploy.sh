@@ -32,7 +32,7 @@ done
 echo "Do you wish to install Netdata, a really useful performance monitoring tool? NOTE: This will take a few minutes."
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) bash <(curl -Ss https://my-netdata.io/kickstart.sh) --dont wait &>/dev/null; echo "Now installing. Please wait..."; break;;
+        Yes ) bash <(curl -Ss https://my-netdata.io/kickstart.sh) --dont-wait &>/dev/null; echo "Now installing. Please wait..."; break;;
         No ) echo "That's OK! Let's continue."; break;;
     esac
 done
