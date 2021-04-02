@@ -4,6 +4,8 @@ Author: Adam Mayfield
 
 Date: 1 April 2021
 
+Video Walkthrough: https://youtu.be/X-nzNbmug2U
+
 This installer does several things, which are all optional. You can:
   - update the Linux system
   - install SSH and enable it on port 22
@@ -13,4 +15,9 @@ This installer does several things, which are all optional. You can:
   - install Netdata, a free, open source system monitoring tool. More info at https://www.netdata.cloud/
   - launch Firefox and open the Netdata dashboard, if installed
   - continuously monitor the status of the provider node
-Installation is a snap. Just download the GolemDeploy.sh script, copy it to your Linux node and run it by opening a terminal and typing "./GolemProvider.sh". The script will handle the rest and walk you through each step.  
+Installation is a snap. 
+  - download the GolemDeploy.sh script and golemsp.service files
+  -  copy to your Linux node 
+  -  place golemsp.service in /etc/systemd/system
+  -  edit golemsp.service to include the local username of the user that logs into the machine
+  -  run GolemDeploy.sh by opening a terminal navigating to the script and typing "./GolemProvider.sh". The script will handle the rest and walk you through each step.  
