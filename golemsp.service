@@ -1,0 +1,12 @@
+[Unit]
+Description=Start Golem
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Environment=PATH=/home/<your_username>/.local/bin/
+Type=simple
+Restart=always
+User=<your username>
+ExecStart=/home/<your_username>/.local/bin/golemsp run
+[Install]
+WantedBy=multi-user.target
