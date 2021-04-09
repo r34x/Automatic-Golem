@@ -50,4 +50,4 @@ select yn in "Yes" "No"; do
         No ) echo "That's OK! You can install it anytime by running bash <(curl -Ss https://my-netdata.io/kickstart.sh"; break;;
     esac
 done
-
+./restartjobs.sh
