@@ -17,9 +17,16 @@ echo "Do you want to install SSH? This is useful for remoting into your provider
          No ) echo "That's OK! You can install SSH anytime by running 'sudo apt install openssh-server && sudo systemctl restart ssh && sudo ufw allow ssh'."; break;;
      esac
  done
+ echo "We will now check for existing installations and delete them. Do you need to back up your keys first?"
+ select yn in "Yes" "No"; do
+     case $yn in
+         Yes ) echo "Please back up your keys and restart the installer when you're finished"; break;;
+         No ) rm -rf $HOME/.local/share/{yagna,ya-provider}
+     esac
+ done 
 read -p "Press Enter to Download and install the Golem Provider."
 curl -sSf https://join.golem.network/as-provider | bash -
-read -p "Installation of the Golem Provider is now complete! Press Enter to export path."
+read -p "Installation of the Golem Provider is now complete! Press Enter to export path to .bashrc."
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 export PATH="$HOME/.local/bin:$PATH"
 echo "Do you wish to start the provider as a service when it reboots? This is useful if the provider hangs and you must restart the machine."
@@ -50,4 +57,4 @@ select yn in "Yes" "No"; do
         No ) echo "That's OK! You can install it anytime by running bash <(curl -Ss https://my-netdata.io/kickstart.sh"; break;;
     esac
 done
-./restartjobs.sh
+sudo chmod +x /home/golem/Documents/Automatic-Golem-main/restartjobs.sh &&./restartjobs.sh
