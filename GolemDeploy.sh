@@ -20,7 +20,7 @@ echo "Do you want to install SSH? This is useful for remoting into your provider
  echo "We will now check for existing installations and delete them. Do you need to back up your keys first?"
  select yn in "Yes" "No"; do
      case $yn in
-         Yes ) echo "Please back up your keys and restart the installer when you're finished"; break;;
+         Yes ) echo "Please back up your keys and restart the installer when you're finished"; exit;;
          No ) rm -rf $HOME/.local/share/{yagna,ya-provider}
      esac
  done 
