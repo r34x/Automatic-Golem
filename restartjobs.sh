@@ -1,4 +1,5 @@
 #!/bin/bash
+#You may have to change line 3 to something like this - if cat /home/<user>/.local/share/yagna/yagna_rCURRENT.log | grep -q ERROR; then
 if cat $HOME/.local/share/yagna/yagna_rCURRENT.log | grep -q ERROR; then
 for i in $(ps -ef | grep golem-provider | grep -v grep | awk '{print $2}')
 do
