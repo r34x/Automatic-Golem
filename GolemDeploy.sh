@@ -21,7 +21,7 @@ echo "Do you want to install SSH? This is useful for remoting into your provider
  select yn in "Yes" "No"; do
      case $yn in
          Yes ) echo "Please back up your keys and restart the installer when you're finished"; exit;;
-         No ) rm -rf $HOME/.local/share/{yagna,ya-provider}
+         No ) rm -rf $HOME/.local/share/{yagna,ya-provider}; break;;
      esac
  done 
 read -p "Press Enter to Download and install the Golem Provider."
