@@ -57,4 +57,4 @@ select yn in "Yes" "No"; do
         No ) echo "That's OK! You can install it anytime by running bash <(curl -Ss https://my-netdata.io/kickstart.sh"; break;;
     esac
 done
-sudo chmod +x /home/golem/Documents/Automatic-Golem-main/restartjobs.sh &&./restartjobs.sh
+sudo chmod +x /home/<user>/Documents/Automatic-Golem-main/restartjobs.sh &&./restartjobs.sh
